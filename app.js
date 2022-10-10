@@ -1,7 +1,7 @@
 let https = require("https");
 let ftp = require("ftp");
 let fs = require("fs");
-var DOWNLOAD_DIR = __dirname + "folder/"; // Folder to download
+var DOWNLOAD_DIR = __dirname + "upload/"; // Folder to download
 
 let download = async () => {
   let file_url = "https://domain.com/file.xml"; // Url from where to download
@@ -25,12 +25,12 @@ download();
 let ftpInstance = new ftp();
 
 ftpInstance.on("ready", () => {
-  ftpInstance.put("file.xml", "file.xml", (err) => { // file names on upload
+  ftpInstance.put("upload/file.xml", "file.xml", (err) => { // file names on upload
     if (err) throw err;
     ftpInstance.end();
   });
 
-  ftpInstance.put("file2.xml", "file2.xml", (err) => { // second file's names
+  ftpInstance.put("upload/file2.xml", "file2.xml", (err) => { // second file's names
     if (err) throw err;
     ftpInstance.end();
   });
