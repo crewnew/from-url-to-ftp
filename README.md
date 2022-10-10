@@ -1,2 +1,3 @@
 # from-url-to-ftp
- Download large files from URL and upload them to FTP
+
+ Download one or more large files from URL to the specified folder and upload them to FTP. Folder, URLs and FTP details must be entered in `app.js` and are marked with commented places.
